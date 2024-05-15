@@ -1,3 +1,4 @@
+
 # My custom lazy-nvim config
 
 ## Setup steps
