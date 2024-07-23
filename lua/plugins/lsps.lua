@@ -66,6 +66,19 @@ return {
 					capabilities = capabilities,
 				})
 
+				-- Emmet LS configuration
+				lspconfig.emmet_ls.setup({
+					filetypes = { "html", "css", "javascript", "typescript", "jsx", "tsx", "vue", "svelte", "scss", "less", "sass", "stylus", "postcss", "markdown", "ejs" },
+					init_options = {
+						html = {
+							options = {
+								["bem.enabled"] = true,
+							},
+						},
+					},
+				})
+
+
 				-- keybinds
 				vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 				vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
